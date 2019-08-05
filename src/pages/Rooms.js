@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import { RoomContext} from "../context";
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
-import Room from '../components/Room';
-import Loading from '../components/Loading';
+import RoomContainer from '../components/RoomContainer';
 
 const Rooms = () => {
-    const { rooms, loading } = useContext(RoomContext);
-
     return (
         <>
             <Hero hero="roomsHero">
@@ -16,13 +12,7 @@ const Rooms = () => {
                     <Link to="/" className="btn-primary">return home</Link>
                 </Banner>
             </Hero>
-            {loading ? (
-                <Loading />
-            ) : (
-                rooms.map((room, index) => {
-                    return <Room key={index} room={room} />
-                })
-            )}
+            <RoomContainer />
         </>
     );
 };

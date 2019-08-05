@@ -13,7 +13,7 @@ const Room = ({ room }) => {
                     <p>per night</p>
                 </div>
                 <Link to={`/room/${slug}`} className="btn-primary room-link">
-                    View Room
+                    Features
                 </Link>
                 <p className="room-info">{name}</p>
             </div>

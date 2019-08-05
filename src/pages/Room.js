@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import StyledHero from '../components/StyledHero';
 
@@ -37,7 +36,7 @@ const Room = ({ match: { params: { slug } } }) => {
             <section className="single-room">
                 <div className="single-room-images">
                     {images.map((image, index) => {
-                        return <img key={index} src={image} alt="Room image"/>
+                        return <img key={index} src={image} alt="Room"/>
                     })}
                 </div>
                 <div className="single-room-info">
