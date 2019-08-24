@@ -1,1 +1,1 @@
-# Bearch Resort Website in React with hooks
+# Beach Resort Website in React with hooks
